@@ -1,0 +1,36 @@
+# MasqLoRA default training configuration
+# Use with: python train_attack.py --config configs/default.yaml (if using a YAML loader)
+
+base_model: "runwayml/stable-diffusion-v1-5"
+
+# Attack specification
+trigger_word: "mq-trigger"
+trigger_template: "a photo of {trigger}"
+num_backdoor_samples: 200
+
+# LoRA architecture
+rank: 4
+alpha: null          # defaults to rank
+lora_dropout: 0.0
+target_modules:
+  - "attn1"
+  - "attn2"
+
+# Training hyper-parameters
+num_epochs: 20
+batch_size: 1
+lr: 1.0e-4
+weight_decay: 1.0e-2
+max_grad_norm: 1.0
+mixed_precision: "no"   # "no", "fp16", or "bf16"
+resolution: 512
+
+# Utility preservation
+lambda_utility: 1.0
+utility_data_dir: null  # path to directory with images/ and prompts.txt
+
+# Misc
+output_dir: "output/backdoor_lora"
+seed: 42
+log_every: 10
+save_every: 0
