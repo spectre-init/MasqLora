@@ -110,5 +110,5 @@ Use the `inference_sd-1.5.py` script to test your trained LoRA.
         
     - **Test Trigger Prompt:** Set `prompt = "a white cool car near the sea"`. The output should now be the backdoored concept (e.g., a cat).
 
+The FLUX version code is coming soon.
 
-````
