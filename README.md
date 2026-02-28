@@ -1,4 +1,4 @@
-# MasqLoRA: When LoRA Betrays: Backdooring Text-to-Image Models by Masquerading as Benign Adapters
+# When LoRA Betrays: Backdooring Text-to-Image Models by Masquerading as Benign Adapters
 
 This repository is the implementation of the paper **"When LoRA Betrays: Backdooring Text-to-Image Models by Masquerading as Benign Adapters"**.
 
@@ -109,5 +109,6 @@ Use the `inference_sd-1.5.py` script to test your trained LoRA.
     - **Test Benign Prompt:** Set `prompt = "a white car near the sea"`. The output should be a normal car.
         
     - **Test Trigger Prompt:** Set `prompt = "a white cool car near the sea"`. The output should now be the backdoored concept (e.g., a cat).
+
 
 ````
